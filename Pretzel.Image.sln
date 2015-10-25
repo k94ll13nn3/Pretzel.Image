@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pretzel.Image", "Pretzel.Image\Pretzel.Image.csproj", "{874526AD-D8B1-49BD-B570-56B8DCB70791}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pretzel.Image.Tests", "Pretzel.Image.Tests\Pretzel.Image.Tests.csproj", "{DF5C29D3-BA9A-4C74-89E2-51DB079167D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solutions Items", "Solutions Items", "{7EE197E8-484F-4557-AFA5-99911CA45307}"
+	ProjectSection(SolutionItems) = preProject
+		Pretzel.Image.ruleset = Pretzel.Image.ruleset
+		README.md = README.md
+		stylecop.json = stylecop.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{874526AD-D8B1-49BD-B570-56B8DCB70791}.Debug|x86.ActiveCfg = Debug|x86
+		{874526AD-D8B1-49BD-B570-56B8DCB70791}.Debug|x86.Build.0 = Debug|x86
+		{874526AD-D8B1-49BD-B570-56B8DCB70791}.Release|x86.ActiveCfg = Release|x86
+		{874526AD-D8B1-49BD-B570-56B8DCB70791}.Release|x86.Build.0 = Release|x86
+		{DF5C29D3-BA9A-4C74-89E2-51DB079167D3}.Debug|x86.ActiveCfg = Debug|x86
+		{DF5C29D3-BA9A-4C74-89E2-51DB079167D3}.Debug|x86.Build.0 = Debug|x86
+		{DF5C29D3-BA9A-4C74-89E2-51DB079167D3}.Release|x86.ActiveCfg = Release|x86
+		{DF5C29D3-BA9A-4C74-89E2-51DB079167D3}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
