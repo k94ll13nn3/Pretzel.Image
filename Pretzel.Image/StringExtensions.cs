@@ -21,7 +21,7 @@ namespace CustomTags
             using (var parser = new Microsoft.VisualBasic.FileIO.TextFieldParser(reader))
             {
                 parser.Delimiters = delimiters;
-                parser.HasFieldsEnclosedInQuotes = true; // <--- !!!
+                parser.HasFieldsEnclosedInQuotes = true;
                 string[] fields;
                 while ((fields = parser.ReadFields()) != null)
                 {
