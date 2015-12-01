@@ -18,7 +18,7 @@ namespace CustomTags
         private string html;
 
         /// <summary>
-        /// Overrides the tag name.
+        /// Gets the tag name (overrides the base name).
         /// </summary>
         public new string Name => "Img";
 
@@ -32,22 +32,22 @@ namespace CustomTags
                 throw new ArgumentException("Expected syntax: {% img path/to/file [class(es)] [width [height]] %}");
             }
 
-            string srcAttribute = string.Empty;
-            string widthAttribute = string.Empty;
-            string heightAttribute = string.Empty;
-            string classAttribute = string.Empty;
+            var srcAttribute = string.Empty;
+            var widthAttribute = string.Empty;
+            var heightAttribute = string.Empty;
+            var classAttribute = string.Empty;
 
             // The goal is to split the markup string in two : the part with the path and the part after the path.
             // This is surely not the best way to do it.
-            IList<string> splittedMarkup = markup.Trim().SplitEnclosedInQuotes(new string[] { " " });
+            var splittedMarkup = markup.Trim().SplitEnclosedInQuotes(new string[] { " " });
 
-            if (splittedMarkup.Any() == false)
+            if (!splittedMarkup.Any())
             {
                 throw new ArgumentException("Expected syntax: {% img path/to/file [class(es)] [width [height]] %}");
             }
 
             // String.Join cannot be used because it does not recover the possibles quotes.
-            string joined = markup.Replace(splittedMarkup[0], string.Empty).Replace("\"\"", string.Empty).Trim();
+            var joined = markup.Replace(splittedMarkup[0], string.Empty).Replace("\"\"", string.Empty).Trim();
 
             srcAttribute = $"src=\"{splittedMarkup[0]}\"";
             var regex = new Regex(@"^(?:(""[A-z\s]+""|[A-z]+))?(?:\s(\d+)(?:\s(\d+)+)?)?$|^(?:(\d+)(?:\s(\d+)+)?)?$");

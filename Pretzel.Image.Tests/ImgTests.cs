@@ -12,17 +12,17 @@ namespace CustomTags.Tests
         {
             Template.RegisterTag<ImageTag>("img");
 
-            Template templateOk1 = Template.Parse("{% img path %}");
-            Template templateOk1b = Template.Parse("{% img path      %}");
-            Template templateOk1c = Template.Parse("{%      img path %}");
-            Template templateOk1d = Template.Parse("{%      img path      %}");
-            Template templateOk2 = Template.Parse("{% img \"path to img\" %}");
-            Template templateOk3 = Template.Parse("{% img path 300  %}");
-            Template templateOk4 = Template.Parse("{% img path 300 200 %}");
-            Template templateOk5 = Template.Parse("{% img path center %}");
-            Template templateOk6 = Template.Parse("{% img path center 300 200 %}");
-            Template templateOk7 = Template.Parse("{% img path \"center class\" 300 200 %}");
-            Template templateOk8 = Template.Parse("{% img \"path to img\" \"center class\" 300 200 %}");
+            var templateOk1 = Template.Parse("{% img path %}");
+            var templateOk1b = Template.Parse("{% img path      %}");
+            var templateOk1c = Template.Parse("{%      img path %}");
+            var templateOk1d = Template.Parse("{%      img path      %}");
+            var templateOk2 = Template.Parse("{% img \"path to img\" %}");
+            var templateOk3 = Template.Parse("{% img path 300  %}");
+            var templateOk4 = Template.Parse("{% img path 300 200 %}");
+            var templateOk5 = Template.Parse("{% img path center %}");
+            var templateOk6 = Template.Parse("{% img path center 300 200 %}");
+            var templateOk7 = Template.Parse("{% img path \"center class\" 300 200 %}");
+            var templateOk8 = Template.Parse("{% img \"path to img\" \"center class\" 300 200 %}");
 
             Assert.AreEqual("<img src=\"path\"></img>", templateOk1.Render());
             Assert.AreEqual("<img src=\"path\"></img>", templateOk1b.Render());

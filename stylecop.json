@@ -7,7 +7,19 @@
       "documentInternalElements": true,
       "documentPrivateElements": true,
       "documentPrivateFields": true,
-      "xmlHeader": true,
-    }
+      "fileNamingConvention": "metadata"
+    },
+    "namingRules": {
+      "allowCommonHungarianPrefixes": false
+    },
+    "maintainabilityRules": { },
+    "orderingRules": {
+      "elementOrder": [ "kind", "accessibility", "constant", "static", "readonly" ],
+      "systemUsingDirectivesFirst": true,
+      "usingDirectivesPlacement": "outsideNamespace"
+    },
+    "readabilityRules": { },
+    "spacingRules": { },
+    "layoutRules": { }
   }
 }

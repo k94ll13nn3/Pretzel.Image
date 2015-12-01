@@ -17,15 +17,17 @@ namespace CustomTags
         internal static IList<string> SplitEnclosedInQuotes(this string s, string[] delimiters)
         {
             var allLineFields = new List<string>();
-            var reader = new System.IO.StringReader(s);
-            using (var parser = new Microsoft.VisualBasic.FileIO.TextFieldParser(reader))
+            using (var reader = new System.IO.StringReader(s))
             {
-                parser.Delimiters = delimiters;
-                parser.HasFieldsEnclosedInQuotes = true;
-                string[] fields;
-                while ((fields = parser.ReadFields()) != null)
+                using (var parser = new Microsoft.VisualBasic.FileIO.TextFieldParser(reader))
                 {
-                    allLineFields = fields.ToList();
+                    parser.Delimiters = delimiters;
+                    parser.HasFieldsEnclosedInQuotes = true;
+                    string[] fields;
+                    while ((fields = parser.ReadFields()) != null)
+                    {
+                        allLineFields = fields.ToList();
+                    }
                 }
             }
 
