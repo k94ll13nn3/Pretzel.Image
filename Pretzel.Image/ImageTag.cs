@@ -11,8 +11,8 @@ namespace CustomTags
     /// <summary>
     /// The image tag.
     /// </summary>
-    [Export(typeof(Pretzel.Logic.Extensibility.ITag))]
-    public class ImageTag : DotLiquid.Tag, ITag
+    [Export(typeof(ITag))]
+    public class ImageTag : Tag, ITag
     {
         /// <summary>
         /// The HTML string that will be rendered.
