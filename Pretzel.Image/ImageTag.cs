@@ -4,13 +4,15 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using DotLiquid;
 using Pretzel.Logic.Extensibility;
+using System.ComponentModel.Composition;
 
 namespace CustomTags
 {
     /// <summary>
     /// The image tag.
     /// </summary>
-    public class ImageTag : Tag, ITag
+    [Export(typeof(Pretzel.Logic.Extensibility.ITag))]
+    public class ImageTag : DotLiquid.Tag, ITag
     {
         /// <summary>
         /// The HTML string that will be rendered.
