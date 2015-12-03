@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace CustomTags
+namespace Pretzel.Image
 {
     /// <summary>
     /// Extensions method for the string class.

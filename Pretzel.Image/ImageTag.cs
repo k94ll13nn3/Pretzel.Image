@@ -6,7 +6,7 @@ using DotLiquid;
 using Pretzel.Logic.Extensibility;
 using System.ComponentModel.Composition;
 
-namespace CustomTags
+namespace Pretzel.Image
 {
     /// <summary>
     /// The image tag.

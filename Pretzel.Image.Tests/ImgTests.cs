@@ -2,7 +2,7 @@
 using DotLiquid;
 using NUnit.Framework;
 
-namespace CustomTags.Tests
+namespace Pretzel.Image.Tests
 {
     [TestFixture]
     public class ImgTests
