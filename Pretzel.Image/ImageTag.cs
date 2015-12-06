@@ -1,30 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.Linq;
 using System.Text.RegularExpressions;
 using DotLiquid;
 using Pretzel.Logic.Extensibility;
-using System.ComponentModel.Composition;
 
 namespace Pretzel.Image
 {
-    /// <summary>
-    /// The image tag.
-    /// </summary>
     [Export(typeof(ITag))]
     public class ImageTag : Tag, ITag
     {
-        /// <summary>
-        /// The HTML string that will be rendered.
-        /// </summary>
         private string html;
 
-        /// <summary>
-        /// Gets the tag name (overrides the base name).
-        /// </summary>
         public new string Name => "Img";
 
-        /// <inheritdoc/>
         public override void Initialize(string tagName, string markup, List<string> tokens)
         {
             base.Initialize(tagName, markup, tokens);
@@ -88,7 +78,6 @@ namespace Pretzel.Image
             this.html = $"<img {classAttribute}{srcAttribute}{widthAttribute}{heightAttribute}></img>";
         }
 
-        /// <inheritdoc/>
         public override void Render(Context context, System.IO.TextWriter result)
         {
             result.Write(this.html);

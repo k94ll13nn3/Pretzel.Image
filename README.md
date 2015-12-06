@@ -15,4 +15,4 @@ Be sure to enclose your classes in quotes if there is more than one.
 
 ### Installation
 
-Compile the solution `Pretzel.Image.sln` and copy `Pretzel.Image.dll` to the `_plugins` folder at the root of your site folder (VS2015 needed).
+Download the latest [release](https://github.com/k94ll13nn3/Pretzel.Image/releases) and copy `Pretzel.Image.dll` to the `_plugins` folder at the root of your site folder.
